@@ -11,3 +11,9 @@ struct TransactionValue: Decodable {
     let amount: Decimal
     let currency: String
 }
+
+extension TransactionValue {
+    func formattedAmount() -> String {
+        return NumberFormatter.currencyFormatter(amount: amount, currency: currency)
+    }
+}

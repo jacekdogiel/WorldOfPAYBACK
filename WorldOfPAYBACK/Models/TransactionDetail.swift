@@ -11,3 +11,9 @@ struct TransactionDetail: Decodable {
     let bookingDate: Date
     let value: TransactionValue
 }
+
+extension TransactionDetail {
+    func mediumFormattedBookingDate() -> String {
+        return DateFormatter.mediumFormattedDate(date: bookingDate)
+    }
+}

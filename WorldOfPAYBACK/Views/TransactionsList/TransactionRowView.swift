@@ -16,9 +16,9 @@ struct TransactionRowView: View {
                 Text(transaction.partnerDisplayName)
                     .foregroundColor(.black)
                     .font(.headline)
-                Text("\(transaction.transactionDetail.description ?? "") - \(transaction.transactionDetail.value.amount.description)")
+                Text("\(transaction.transactionDetail.description ?? "") - \(transaction.transactionDetail.value.formattedAmount())")
                     .foregroundColor(.gray)
-                Text(transaction.transactionDetail.bookingDate.formatted())
+                Text(transaction.transactionDetail.mediumFormattedBookingDate())
                     .foregroundColor(.gray)
             }
             .padding()
