@@ -84,6 +84,7 @@ struct TransactionsListView: View {
                 ForEach(viewModel.filteredTransactions.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })) { transaction in
                     TransactionRowView(transaction: transaction)
                         .onTapGesture { [navigateToDetail] in
+                            viewModel.selectedTransaction = transaction
                             navigateToDetail()
                         }
                         .background(Color.white)

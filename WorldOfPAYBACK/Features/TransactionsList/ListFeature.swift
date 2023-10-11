@@ -23,7 +23,10 @@ struct ListFeature: View {
                 router.navigateToDetail()
             }
         case .detail:
-            EmptyView()
+            if let transaction = viewModel.selectedTransaction {
+                TransactionDetailView(router: router, transaction: transaction)
+                    .transaction { $0.animation = .default }
+            }
         }
     }
 }

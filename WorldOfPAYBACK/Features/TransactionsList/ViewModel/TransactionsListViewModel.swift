@@ -15,6 +15,7 @@ final class TransactionsListViewModel: ObservableObject {
     @Published var isError: Bool = false
     @Published var selectedCategory = -1
     @Published var categories: Set<Int> = []
+    @Published var selectedTransaction: Transaction?
     @Published var transactionCurrency: String = ""
 
     init(transactionLoader: TransactionLoading) {
