@@ -47,7 +47,8 @@ class TransactionsListViewModel: ObservableObject {
     }
 
     func displaySum() -> String {
-        return ""
+        let sum = Transaction.calculateSum(transactions: filteredTransactions)
+        return NumberFormatter.currencyFormatter(amount: sum, currency: transactionCurrency)
     }
     
     private func extractCategories() {

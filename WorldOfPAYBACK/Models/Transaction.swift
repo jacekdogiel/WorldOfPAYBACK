@@ -18,3 +18,9 @@ struct Transaction: Identifiable, Decodable {
         case transactionDetail
     }
 }
+
+extension Transaction {
+    static func calculateSum(transactions: [Transaction]) -> Decimal {
+        return transactions.reduce(Decimal(0)) { $0 + $1.transactionDetail.value.amount }
+    }
+}
