@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TransactionsListView: View {
     @StateObject var viewModel: TransactionsListViewModel
+    var navigateToDetail: () -> Void
 
     var body: some View {
         NavigationView {
@@ -82,8 +83,8 @@ struct TransactionsListView: View {
             LazyVStack(alignment: .leading, spacing: 8) {
                 ForEach(viewModel.filteredTransactions.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })) { transaction in
                     TransactionRowView(transaction: transaction)
-                        .onTapGesture {
-                            #warning("navigate to detail")
+                        .onTapGesture { [navigateToDetail] in
+                            navigateToDetail()
                         }
                         .background(Color.white)
                         .cornerRadius(10)
@@ -112,8 +113,9 @@ struct TransactionsListView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionsListView(
             viewModel: TransactionsListViewModel(
-                transactionLoader: MockTransactionLoader()
-            )
+                transactionLoader: MockTransactionLoader(sleepTime: 1_000_000_000)
+            ),
+            navigateToDetail: {}
         )
     }
 }

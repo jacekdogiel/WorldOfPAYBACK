@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-class TransactionsListViewModel: ObservableObject {
+final class TransactionsListViewModel: ObservableObject {
     private let transactionLoader: TransactionLoading
 
     @Published var transactions: [Transaction] = []
