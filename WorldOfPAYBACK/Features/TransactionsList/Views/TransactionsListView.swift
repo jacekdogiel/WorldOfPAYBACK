@@ -16,7 +16,6 @@ struct TransactionsListView: View {
             VStack {
                 content
             }
-            .transaction { $0.animation = .default }
             .navigationTitle("Transactions list")
         }
     }
@@ -92,9 +91,9 @@ struct TransactionsListView: View {
                         .shadow(color: Color.gray.opacity(0.4), radius: 4, x: 0, y: 2)
                 }
             }
+            .transaction { $0.animation = .none }
             .padding()
         }
-        .transaction { $0.animation = .none }
         .refreshable {
             Task {
                 await viewModel.loadTransactions()

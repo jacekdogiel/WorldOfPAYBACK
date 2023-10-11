@@ -25,6 +25,8 @@
 		B2E7467E2AD6EB3900169D64 /* ListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7467D2AD6EB3900169D64 /* ListFeature.swift */; };
 		B2E746802AD6EC5D00169D64 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7467F2AD6EC5D00169D64 /* ListRouter.swift */; };
 		B2E746852AD71CB600169D64 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746842AD71CB600169D64 /* TransactionDetailView.swift */; };
+		B2E746872AD71E5500169D64 /* TransactionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746862AD71E5500169D64 /* TransactionRemoteService.swift */; };
+		B2E7468A2AD7226B00169D64 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746892AD7226B00169D64 /* AppEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		B2E7467D2AD6EB3900169D64 /* ListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFeature.swift; sourceTree = "<group>"; };
 		B2E7467F2AD6EC5D00169D64 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		B2E746842AD71CB600169D64 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		B2E746862AD71E5500169D64 /* TransactionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRemoteService.swift; sourceTree = "<group>"; };
+		B2E746892AD7226B00169D64 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		B2E7464D2AD6CD5000169D64 /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
+				B2E746882AD7223400169D64 /* Environment */,
 				B2E746772AD6E3BD00169D64 /* Extensions */,
 				B2E746702AD6D3CF00169D64 /* Features */,
 				B2E746662AD6CEFC00169D64 /* Services */,
@@ -125,6 +130,7 @@
 			children = (
 				B2E746672AD6CF1800169D64 /* TransactionLoading.swift */,
 				B2E7466A2AD6CF6900169D64 /* MockTransactionLoader.swift */,
+				B2E746862AD71E5500169D64 /* TransactionRemoteService.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				B2E746842AD71CB600169D64 /* TransactionDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B2E746882AD7223400169D64 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				B2E746892AD7226B00169D64 /* AppEnvironment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +272,11 @@
 				B2E746802AD6EC5D00169D64 /* ListRouter.swift in Sources */,
 				B2E746792AD6E3E800169D64 /* NumberFormatter+CurrencyFormatting.swift in Sources */,
 				B2E7467B2AD6E42E00169D64 /* DateFormatter+MediumFormattedDate.swift in Sources */,
+				B2E746872AD71E5500169D64 /* TransactionRemoteService.swift in Sources */,
 				B2E746762AD6D63500169D64 /* TransactionsListViewModel.swift in Sources */,
 				B2E746632AD6CE5800169D64 /* TransactionDetail.swift in Sources */,
 				B2E746732AD6D5F700169D64 /* TransactionRowView.swift in Sources */,
+				B2E7468A2AD7226B00169D64 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

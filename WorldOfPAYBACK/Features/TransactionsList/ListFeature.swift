@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ListFeature: View {
     @StateObject private var router = ListRouter()
+//    @StateObject private var viewModel = TransactionsListViewModel(
+//        transactionLoader: TransactionRemoteService(
+//            environment: AppEnvironment()
+//        )
+//    )
     @StateObject private var viewModel = TransactionsListViewModel(
         transactionLoader: MockTransactionLoader(
             sleepTime: 1_000_000_000,
@@ -22,9 +27,12 @@ struct ListFeature: View {
             TransactionsListView(viewModel: viewModel) { [router] in
                 router.navigateToDetail()
             }
+            .transition(.opacity)
+            .transaction { $0.animation = .default }
         case .detail:
             if let transaction = viewModel.selectedTransaction {
                 TransactionDetailView(router: router, transaction: transaction)
+                    .transition(.push(from: .trailing))
                     .transaction { $0.animation = .default }
             }
         }
