@@ -7,10 +7,18 @@
 import Foundation
 
 struct MockTransactionLoader: TransactionLoading {
+    var sleepTime: UInt64
+    var showError: () -> Bool
+    
+    init(sleepTime: UInt64  = 0, showError: @autoclosure @escaping () -> Bool = false) {
+        self.sleepTime = sleepTime
+        self.showError = showError
+    }
+    
     func loadTransactions() async throws -> [Transaction] {
-        try await Task.sleep(nanoseconds: 1_000_000_000)
+        try await Task.sleep(nanoseconds: sleepTime)
         
-        if Bool.random() {
+        if showError() {
             throw NSError(domain: "App", code: 500, userInfo: [NSLocalizedDescriptionKey: "Random error occurred"])
         }
         
