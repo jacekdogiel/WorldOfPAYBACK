@@ -27,6 +27,9 @@
 		B2E746852AD71CB600169D64 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746842AD71CB600169D64 /* TransactionDetailView.swift */; };
 		B2E746872AD71E5500169D64 /* TransactionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746862AD71E5500169D64 /* TransactionRemoteService.swift */; };
 		B2E7468A2AD7226B00169D64 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746892AD7226B00169D64 /* AppEnvironment.swift */; };
+		B2E7468D2AD72C6C00169D64 /* FeedFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7468C2AD72C6C00169D64 /* FeedFeature.swift */; };
+		B2E746902AD72C9B00169D64 /* ShoppingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7468F2AD72C9B00169D64 /* ShoppingFeature.swift */; };
+		B2E746932AD72CC700169D64 /* SettingsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746922AD72CC700169D64 /* SettingsFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		B2E746842AD71CB600169D64 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		B2E746862AD71E5500169D64 /* TransactionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRemoteService.swift; sourceTree = "<group>"; };
 		B2E746892AD7226B00169D64 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B2E7468C2AD72C6C00169D64 /* FeedFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFeature.swift; sourceTree = "<group>"; };
+		B2E7468F2AD72C9B00169D64 /* ShoppingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFeature.swift; sourceTree = "<group>"; };
+		B2E746922AD72CC700169D64 /* SettingsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 		B2E746702AD6D3CF00169D64 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B2E746912AD72CB500169D64 /* Settings */,
+				B2E7468E2AD72C9100169D64 /* Shopping */,
+				B2E7468B2AD72C4D00169D64 /* Feed */,
 				B2E746712AD6D3D900169D64 /* TransactionsList */,
 			);
 			path = Features;
@@ -187,6 +196,30 @@
 				B2E746892AD7226B00169D64 /* AppEnvironment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		B2E7468B2AD72C4D00169D64 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7468C2AD72C6C00169D64 /* FeedFeature.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		B2E7468E2AD72C9100169D64 /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7468F2AD72C9B00169D64 /* ShoppingFeature.swift */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
+		B2E746912AD72CB500169D64 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B2E746922AD72CC700169D64 /* SettingsFeature.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,13 +300,16 @@
 				B2E746612AD6CE2B00169D64 /* Transaction.swift in Sources */,
 				B2E7466B2AD6CF6900169D64 /* MockTransactionLoader.swift in Sources */,
 				B2E746852AD71CB600169D64 /* TransactionDetailView.swift in Sources */,
+				B2E746902AD72C9B00169D64 /* ShoppingFeature.swift in Sources */,
 				B2E7467E2AD6EB3900169D64 /* ListFeature.swift in Sources */,
+				B2E746932AD72CC700169D64 /* SettingsFeature.swift in Sources */,
 				B2E7464F2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift in Sources */,
 				B2E746802AD6EC5D00169D64 /* ListRouter.swift in Sources */,
 				B2E746792AD6E3E800169D64 /* NumberFormatter+CurrencyFormatting.swift in Sources */,
 				B2E7467B2AD6E42E00169D64 /* DateFormatter+MediumFormattedDate.swift in Sources */,
 				B2E746872AD71E5500169D64 /* TransactionRemoteService.swift in Sources */,
 				B2E746762AD6D63500169D64 /* TransactionsListViewModel.swift in Sources */,
+				B2E7468D2AD72C6C00169D64 /* FeedFeature.swift in Sources */,
 				B2E746632AD6CE5800169D64 /* TransactionDetail.swift in Sources */,
 				B2E746732AD6D5F700169D64 /* TransactionRowView.swift in Sources */,
 				B2E7468A2AD7226B00169D64 /* AppEnvironment.swift in Sources */,

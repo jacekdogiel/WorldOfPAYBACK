@@ -12,6 +12,28 @@ struct WorldOfPAYBACKApp: App {
     var body: some Scene {
         WindowGroup {
             ListFeature()
+            
+//            TabView {
+//                ListFeature()
+//                    .tabItem {
+//                        Label("List", systemImage: "list.bullet")
+//                    }
+//
+//                FeedFeature()
+//                    .tabItem {
+//                        Label("Feed", systemImage: "newspaper")
+//                    }
+//
+//                ShoppingFeature()
+//                    .tabItem {
+//                        Label("Online Shopping", systemImage: "bag")
+//                    }
+//
+//                SettingsFeature()
+//                    .tabItem {
+//                        Label("Settings", systemImage: "gear")
+//                    }
+//            }
         }
     }
 }
