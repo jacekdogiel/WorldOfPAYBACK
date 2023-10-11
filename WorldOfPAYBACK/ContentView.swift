@@ -16,6 +16,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear() {
+            Task {
+                let loader = MockTransactionLoader()
+                _ = try? await loader.loadTransactions()
+            }
+        }
     }
 }
 

@@ -15,6 +15,9 @@
 		B2E746612AD6CE2B00169D64 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746602AD6CE2B00169D64 /* Transaction.swift */; };
 		B2E746632AD6CE5800169D64 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746622AD6CE5800169D64 /* TransactionDetail.swift */; };
 		B2E746652AD6CE7B00169D64 /* TransactionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746642AD6CE7B00169D64 /* TransactionValue.swift */; };
+		B2E746682AD6CF1800169D64 /* TransactionLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746672AD6CF1800169D64 /* TransactionLoading.swift */; };
+		B2E7466B2AD6CF6900169D64 /* MockTransactionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7466A2AD6CF6900169D64 /* MockTransactionLoader.swift */; };
+		B2E7466F2AD6D00E00169D64 /* PBTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E7466E2AD6D00E00169D64 /* PBTransactions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B2E746602AD6CE2B00169D64 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		B2E746622AD6CE5800169D64 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
 		B2E746642AD6CE7B00169D64 /* TransactionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValue.swift; sourceTree = "<group>"; };
+		B2E746672AD6CF1800169D64 /* TransactionLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLoading.swift; sourceTree = "<group>"; };
+		B2E7466A2AD6CF6900169D64 /* MockTransactionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionLoader.swift; sourceTree = "<group>"; };
+		B2E7466E2AD6D00E00169D64 /* PBTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PBTransactions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 		B2E7464D2AD6CD5000169D64 /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
+				B2E7466E2AD6D00E00169D64 /* PBTransactions.json */,
+				B2E746662AD6CEFC00169D64 /* Services */,
 				B2E7465D2AD6CDF400169D64 /* Models */,
 				B2E7464E2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift */,
 				B2E746502AD6CD5000169D64 /* ContentView.swift */,
@@ -87,6 +95,23 @@
 				B2E746642AD6CE7B00169D64 /* TransactionValue.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B2E746662AD6CEFC00169D64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B2E746692AD6CF2C00169D64 /* Transaction */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B2E746692AD6CF2C00169D64 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				B2E746672AD6CF1800169D64 /* TransactionLoading.swift */,
+				B2E7466A2AD6CF6900169D64 /* MockTransactionLoader.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E746572AD6CD5100169D64 /* Preview Assets.xcassets in Resources */,
+				B2E7466F2AD6D00E00169D64 /* PBTransactions.json in Resources */,
 				B2E746532AD6CD5100169D64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,10 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E746682AD6CF1800169D64 /* TransactionLoading.swift in Sources */,
 				B2E746652AD6CE7B00169D64 /* TransactionValue.swift in Sources */,
 				B2E7465F2AD6CE0300169D64 /* TransactionsResponse.swift in Sources */,
 				B2E746512AD6CD5000169D64 /* ContentView.swift in Sources */,
 				B2E746612AD6CE2B00169D64 /* Transaction.swift in Sources */,
+				B2E7466B2AD6CF6900169D64 /* MockTransactionLoader.swift in Sources */,
 				B2E7464F2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift in Sources */,
 				B2E746632AD6CE5800169D64 /* TransactionDetail.swift in Sources */,
 			);
