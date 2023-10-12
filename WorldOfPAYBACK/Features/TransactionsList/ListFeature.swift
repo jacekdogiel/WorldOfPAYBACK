@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListFeature: View {
     @StateObject private var router = ListRouter()
+#warning("Left for development purposes")
 //    @StateObject private var viewModel = TransactionsListViewModel(
 //        transactionLoader: TransactionRemoteService(
 //            environment: AppEnvironment()

@@ -9,10 +9,21 @@ import SwiftUI
 
 @main
 struct WorldOfPAYBACKApp: App {
+    @StateObject var networkMonitor = NetworkMonitor()
+    @State private var showNetworkAlert = false
+    
     var body: some Scene {
         WindowGroup {
             ListFeature()
+                .onChange(of: networkMonitor.isConnected) { connection in
+                    showNetworkAlert = connection == false
+                }
+                .alert(
+                    "Network connection is offline.",
+                    isPresented: $showNetworkAlert
+                ) {}
             
+            #warning("Left for development purposes")
 //            TabView {
 //                ListFeature()
 //                    .tabItem {
