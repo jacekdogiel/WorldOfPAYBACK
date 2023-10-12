@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TransactionValue: Decodable {
+struct TransactionValue: Decodable, Equatable {
     let amount: Decimal
     let currency: String
 }

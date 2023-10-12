@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Transaction: Identifiable, Decodable {
+struct Transaction: Identifiable, Decodable, Equatable {
     let id = UUID()
     let partnerDisplayName: String
     let category: Int

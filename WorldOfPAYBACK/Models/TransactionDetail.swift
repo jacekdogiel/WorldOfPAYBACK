@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct TransactionDetail: Decodable {
+struct TransactionDetail: Decodable, Equatable {
     let description: String?
     let bookingDate: Date
     let value: TransactionValue
