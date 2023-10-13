@@ -9,6 +9,6 @@ import SwiftUI
 
 struct SettingsFeature: View {
     var body: some View {
-        Text("Settings Feature")
+        Text("settings_feature")
     }
 }

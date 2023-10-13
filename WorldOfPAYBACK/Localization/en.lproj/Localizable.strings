@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  WorldOfPAYBACK
+
+  Created by Jacek Dogiel on 13/10/2023.
+  
+*/
+"all" = "All";
+"back" = "Back";
+"category" = "Category";
+"description" = "Description";
+"error_transactions" = "Error loading transactions.";
+"feed_feature" = "Feed Feature";
+"filter_by_category" = "Filter by Category";
+"loading_transactions" = "Loading transactions...";
+"n_a" = "N/A";
+"network_offline" = "Network connection is offline.";
+"partner" = "Partner";
+"retry" = "Retry";
+"settings_feature" = "Settings Feature";
+"shopping_feature" = "Online Shopping Feature";
+"sum" = "Sum";
+"transactions_list" = "Transactions list";

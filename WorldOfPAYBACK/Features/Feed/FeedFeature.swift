@@ -9,6 +9,6 @@ import SwiftUI
 
 struct FeedFeature: View {
     var body: some View {
-        Text("Feed Feature")
+        Text("feed_feature")
     }
 }

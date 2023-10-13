@@ -16,7 +16,7 @@ struct TransactionsListView: View {
             VStack {
                 content
             }
-            .navigationTitle("Transactions list")
+            .navigationTitle("transactions_list")
         }
     }
 
@@ -33,7 +33,7 @@ struct TransactionsListView: View {
 
     private var loadingView: some View {
         VStack {
-            Text("Loading transactions...")
+            Text("loading_transactions")
                 .padding()
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle())
@@ -42,7 +42,7 @@ struct TransactionsListView: View {
 
     private var errorView: some View {
         VStack {
-            Text("Error loading transactions.")
+            Text("error_transactions")
                 .foregroundColor(.red)
                 .padding()
             Button("Retry") {
@@ -62,12 +62,12 @@ struct TransactionsListView: View {
     }
 
     private var filterPicker: some View {
-        Picker("Filter by Category", selection: $viewModel.selectedCategory) {
+        Picker("filter_by_category", selection: $viewModel.selectedCategory) {
             ForEach(viewModel.categories.sorted(), id: \.self) { category in
                 if category == -1 {
-                    Text("All").tag(category)
+                    Text("all").tag(category)
                 } else {
-                    Text("Category \(category)").tag(category)
+                    Text("\("category".localized) \(category)").tag(category)
                 }
             }
         }
@@ -102,7 +102,7 @@ struct TransactionsListView: View {
     }
 
     private var sumText: some View {
-        Text("Sum: \(viewModel.displaySum())")
+        Text("\("sum".localized): \(viewModel.displaySum())")
             .font(.headline)
             .padding(16)
     }

@@ -19,7 +19,7 @@ struct WorldOfPAYBACKApp: App {
                     showNetworkAlert = connection == false
                 }
                 .alert(
-                    "Network connection is offline.",
+                    "network_offline",
                     isPresented: $showNetworkAlert
                 ) {}
         }

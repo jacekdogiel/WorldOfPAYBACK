@@ -9,6 +9,6 @@ import SwiftUI
 
 struct ShoppingFeature: View {
     var body: some View {
-        Text("Online Shopping Feature")
+        Text("shopping_feature")
     }
 }

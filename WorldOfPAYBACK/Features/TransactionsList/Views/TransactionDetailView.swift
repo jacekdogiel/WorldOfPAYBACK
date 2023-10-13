@@ -13,16 +13,16 @@ struct TransactionDetailView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Partner: \(transaction.partnerDisplayName)")
+                Text("\("partner".localized): \(transaction.partnerDisplayName)")
                     .font(.headline)
                 
-                Text("Description: \(transaction.transactionDetail.description ?? "N/A")")
+                Text("\("description".localized): \(transaction.transactionDetail.description ?? "n_a".localized)")
                     .foregroundColor(.gray)
                 
                 Spacer()
             }
             .padding()
-            .navigationBarItems(leading: Button("Back") {
+            .navigationBarItems(leading: Button("back") {
                 router.navigateBack()
             })
         }

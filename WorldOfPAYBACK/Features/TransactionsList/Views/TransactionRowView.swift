@@ -16,7 +16,7 @@ struct TransactionRowView: View {
                 Text(transaction.partnerDisplayName)
                     .foregroundColor(.black)
                     .font(.headline)
-                Text("\(transaction.transactionDetail.description ?? "N/A") - \(transaction.transactionDetail.value.formattedAmount())")
+                Text("\(transaction.transactionDetail.description ?? "n_a".localized) - \(transaction.transactionDetail.value.formattedAmount())")
                     .foregroundColor(.gray)
                 Text(transaction.transactionDetail.mediumFormattedBookingDate())
                     .foregroundColor(.gray)
