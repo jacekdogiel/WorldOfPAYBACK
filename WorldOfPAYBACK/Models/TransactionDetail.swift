@@ -13,7 +13,7 @@ struct TransactionDetail: Decodable, Equatable {
 }
 
 extension TransactionDetail {
-    func mediumFormattedBookingDate() -> String {
+    var mediumFormattedBookingDate: String {
         return DateFormatter.mediumFormattedDate(date: bookingDate)
     }
 }

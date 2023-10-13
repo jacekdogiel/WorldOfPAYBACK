@@ -13,7 +13,7 @@ struct TransactionValue: Decodable, Equatable {
 }
 
 extension TransactionValue {
-    func formattedAmount() -> String {
+    var formattedAmount: String {
         return NumberFormatter.currencyFormatter(amount: amount, currency: currency)
     }
 }
