@@ -8,11 +8,11 @@
 import Foundation
 
 extension DateFormatter {
-    static func mediumFormattedDate(date: Date) -> String {
+    static func mediumFormattedDate(date: Date, locale: Locale = .current) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .medium
-        formatter.locale = .current
+        formatter.locale = locale
         return formatter.string(from: date)
     }
 }

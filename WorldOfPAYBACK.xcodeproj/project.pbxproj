@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B28B03B52AD8434400C6B24C /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03B42AD8434400C6B24C /* DateFormatterTests.swift */; };
+		B28B03B72AD849FF00C6B24C /* ListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03B62AD849FF00C6B24C /* ListRouterTests.swift */; };
+		B28B03B92AD84C6700C6B24C /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03B82AD84C6700C6B24C /* NumberFormatterTests.swift */; };
 		B2B2291D2AD801360001795D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2291C2AD801360001795D /* NetworkMonitor.swift */; };
 		B2E7464F2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7464E2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift */; };
 		B2E746512AD6CD5000169D64 /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746502AD6CD5000169D64 /* TransactionsListView.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B28B03B42AD8434400C6B24C /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
+		B28B03B62AD849FF00C6B24C /* ListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterTests.swift; sourceTree = "<group>"; };
+		B28B03B82AD84C6700C6B24C /* NumberFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
 		B2B2291C2AD801360001795D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B2E7464B2AD6CD5000169D64 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E7464E2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
@@ -259,6 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				B2FB92422AD840560045FEEF /* TransactionsListViewModelTests.swift */,
+				B28B03B42AD8434400C6B24C /* DateFormatterTests.swift */,
+				B28B03B62AD849FF00C6B24C /* ListRouterTests.swift */,
+				B28B03B82AD84C6700C6B24C /* NumberFormatterTests.swift */,
 			);
 			path = WorldOfPAYBACKTests;
 			sourceTree = "<group>";
@@ -392,6 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28B03B52AD8434400C6B24C /* DateFormatterTests.swift in Sources */,
+				B28B03B92AD84C6700C6B24C /* NumberFormatterTests.swift in Sources */,
+				B28B03B72AD849FF00C6B24C /* ListRouterTests.swift in Sources */,
 				B2FB92432AD840560045FEEF /* TransactionsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

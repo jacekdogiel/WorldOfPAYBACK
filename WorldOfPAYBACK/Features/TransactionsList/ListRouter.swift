@@ -18,6 +18,9 @@ final class ListRouter: ObservableObject {
     private var navigationStack: [ListView] = []
 
     func navigateToDetail() {
+        guard currentView != .detail else {
+            return
+        }
         navigationStack.append(currentView)
         currentView = .detail
     }
