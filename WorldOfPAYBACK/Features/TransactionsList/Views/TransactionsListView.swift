@@ -113,7 +113,7 @@ struct TransactionsListView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionsListView(
             viewModel: TransactionsListViewModel(
-                transactionLoader: MockTransactionLoader(sleepTime: 1_000_000_000)
+                transactionLoader: MockTransactionLoader()
             ),
             navigateToDetail: {}
         )

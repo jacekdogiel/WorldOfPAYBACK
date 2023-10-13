@@ -26,7 +26,9 @@ struct ListFeature: View {
             .transaction { $0.animation = .default }
         case .detail:
             if let transaction = viewModel.selectedTransaction {
-                TransactionDetailView(router: router, transaction: transaction)
+                TransactionDetailView(transaction: transaction) { [router] in
+                    router.navigateBack()
+                }
                     .transition(.push(from: .trailing))
                     .transaction { $0.animation = .default }
             }

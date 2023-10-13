@@ -32,3 +32,9 @@ struct TransactionRowView: View {
         .contentShape(Rectangle())
     }
 }
+
+struct TransactionRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        TransactionRowView(transaction: Transaction.fake)
+    }
+}

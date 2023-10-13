@@ -7,8 +7,9 @@
 import SwiftUI
 
 struct TransactionDetailView: View {
-    @StateObject var router: ListRouter
     let transaction: Transaction
+    
+    var navigateBack: () -> Void
 
     var body: some View {
         NavigationView {
@@ -22,9 +23,15 @@ struct TransactionDetailView: View {
                 Spacer()
             }
             .padding()
-            .navigationBarItems(leading: Button("back") {
-                router.navigateBack()
+            .navigationBarItems(leading: Button("back") { [navigateBack] in
+                navigateBack()
             })
         }
+    }
+}
+
+struct TransactionDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        TransactionDetailView(transaction: Transaction.fake, navigateBack: {})
     }
 }

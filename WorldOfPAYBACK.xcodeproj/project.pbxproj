@@ -12,6 +12,7 @@
 		B28B03B92AD84C6700C6B24C /* NumberFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03B82AD84C6700C6B24C /* NumberFormatterTests.swift */; };
 		B28B03BD2AD93F0300C6B24C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B28B03BF2AD93F0300C6B24C /* Localizable.strings */; };
 		B28B03C42AD944F200C6B24C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03C32AD944F200C6B24C /* String+Localization.swift */; };
+		B28B03C72AD9578900C6B24C /* Transaction+Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B03C62AD9578900C6B24C /* Transaction+Fake.swift */; };
 		B2B2291D2AD801360001795D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B2291C2AD801360001795D /* NetworkMonitor.swift */; };
 		B2E7464F2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7464E2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift */; };
 		B2E746512AD6CD5000169D64 /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E746502AD6CD5000169D64 /* TransactionsListView.swift */; };
@@ -55,6 +56,7 @@
 		B28B03B82AD84C6700C6B24C /* NumberFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatterTests.swift; sourceTree = "<group>"; };
 		B28B03BE2AD93F0300C6B24C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B28B03C32AD944F200C6B24C /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		B28B03C62AD9578900C6B24C /* Transaction+Fake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+Fake.swift"; sourceTree = "<group>"; };
 		B2B2291C2AD801360001795D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B2E7464B2AD6CD5000169D64 /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E7464E2AD6CD5000169D64 /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				B2E746602AD6CE2B00169D64 /* Transaction.swift */,
 				B2E746622AD6CE5800169D64 /* TransactionDetail.swift */,
 				B2E746642AD6CE7B00169D64 /* TransactionValue.swift */,
+				B28B03C62AD9578900C6B24C /* Transaction+Fake.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				B2E7465F2AD6CE0300169D64 /* TransactionsResponse.swift in Sources */,
 				B2E746512AD6CD5000169D64 /* TransactionsListView.swift in Sources */,
 				B2E746612AD6CE2B00169D64 /* Transaction.swift in Sources */,
+				B28B03C72AD9578900C6B24C /* Transaction+Fake.swift in Sources */,
 				B2E7466B2AD6CF6900169D64 /* MockTransactionLoader.swift in Sources */,
 				B2E746852AD71CB600169D64 /* TransactionDetailView.swift in Sources */,
 				B2E746902AD72C9B00169D64 /* ShoppingFeature.swift in Sources */,
