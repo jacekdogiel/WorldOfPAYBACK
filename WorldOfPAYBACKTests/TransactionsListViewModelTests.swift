@@ -48,7 +48,9 @@ class TransactionsListViewModelTests: XCTestCase {
 
         viewModel.selectedCategory = -1
         viewModel.filterTransactions()
-        XCTAssertEqual(viewModel.filteredTransactions, viewModel.transactions)
+        
+        let sortedTransactions = viewModel.transactions.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })
+        XCTAssertEqual(viewModel.filteredTransactions, sortedTransactions)
     }
 
     func testDisplaySum() async throws {
@@ -95,5 +97,17 @@ class TransactionsListViewModelTests: XCTestCase {
         let sumForVariousAmounts = viewModel.displaySum()
         let expectedSum: Decimal = 5770.00
         XCTAssertEqual(sumForVariousAmounts, NumberFormatter.currencyFormatter(amount: expectedSum, currency: viewModel.transactionCurrency))
+    }
+    
+    func testCategoryLabelTextAll() {
+        let result = viewModel.categoryLabelText(-1)
+
+        XCTAssertEqual(result, "all".localized)
+    }
+    
+    func testCategoryLabelTextWithCategory() {
+        let result = viewModel.categoryLabelText(42)
+
+        XCTAssertEqual(result, "\("category".localized) 42")
     }
 }

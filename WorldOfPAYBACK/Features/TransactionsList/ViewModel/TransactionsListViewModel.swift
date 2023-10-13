@@ -17,6 +17,16 @@ final class TransactionsListViewModel: ObservableObject {
     @Published var categories: Set<Int> = []
     @Published var selectedTransaction: Transaction?
     @Published var transactionCurrency: String = ""
+    
+    var categoryLabelText: (Int) -> String {
+        return { category in
+            if category == -1 {
+                return "all".localized
+            } else {
+                return "\("category".localized) \(category)"
+            }
+        }
+    }
 
     init(transactionLoader: TransactionLoading) {
         self.transactionLoader = transactionLoader
@@ -40,10 +50,12 @@ final class TransactionsListViewModel: ObservableObject {
     }
 
     func filterTransactions() {
+        let sortedTransactions = transactions.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })
+        
         if selectedCategory > 0 {
-            filteredTransactions = transactions.filter { $0.category == selectedCategory }
+            filteredTransactions = sortedTransactions.filter { $0.category == selectedCategory }
         } else {
-            filteredTransactions = transactions
+            filteredTransactions = sortedTransactions
         }
     }
 

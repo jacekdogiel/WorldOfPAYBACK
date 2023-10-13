@@ -64,11 +64,7 @@ struct TransactionsListView: View {
     private var filterPicker: some View {
         Picker("filter_by_category", selection: $viewModel.selectedCategory) {
             ForEach(viewModel.categories.sorted(), id: \.self) { category in
-                if category == -1 {
-                    Text("all").tag(category)
-                } else {
-                    Text("\("category".localized) \(category)").tag(category)
-                }
+                Text(viewModel.categoryLabelText(category)).tag(category)
             }
         }
         .onChange(of: viewModel.selectedCategory) { newValue in
@@ -80,7 +76,7 @@ struct TransactionsListView: View {
     private var transactionsList: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: 8) {
-                ForEach(viewModel.filteredTransactions.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })) { transaction in
+                ForEach(viewModel.filteredTransactions) { transaction in
                     TransactionRowView(transaction: transaction)
                         .onTapGesture { [navigateToDetail] in
                             viewModel.selectedTransaction = transaction
