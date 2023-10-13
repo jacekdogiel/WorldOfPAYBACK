@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum TransactionRemoteServiceError: Error {
+    case invalidURL
+}
+
 final class TransactionRemoteService: TransactionLoading {
     private let baseURL: String
 
@@ -15,10 +19,10 @@ final class TransactionRemoteService: TransactionLoading {
     }
 
     func loadTransactions() async throws -> [Transaction] {
-        let endpointURL = "\(baseURL)/transactions"
+        let endpointURL = "\(baseURL)/\(Constants.endpoint)"
 
         guard let url = URL(string: endpointURL) else {
-            throw NSError(domain: "App", code: 400, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
+            throw TransactionRemoteServiceError.invalidURL
         }
 
         let (data, _) = try await URLSession.shared.data(from: url)
@@ -28,5 +32,10 @@ final class TransactionRemoteService: TransactionLoading {
 
         let response = try decoder.decode(TransactionsResponse.self, from: data)
         return response.items
+    }
+    
+    struct Constants {
+        static let domain = "App"
+        static let endpoint = "transactions"
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 class NetworkMonitor: ObservableObject {
     private let networkMonitor = NWPathMonitor()
-    private let workerQueue = DispatchQueue(label: "Monitor")
+    private let workerQueue = DispatchQueue(label: Constants.monitor)
     var isConnected = false
 
     init() {
@@ -23,5 +23,9 @@ class NetworkMonitor: ObservableObject {
             }
         }
         networkMonitor.start(queue: workerQueue)
+    }
+    
+    struct Constants {
+        static let monitor = "Monitor"
     }
 }

@@ -45,7 +45,7 @@ struct TransactionsListView: View {
             Text("error_transactions")
                 .foregroundColor(.red)
                 .padding()
-            Button("Retry") {
+            Button("retry") {
                 Task {
                     await viewModel.loadTransactions()
                 }

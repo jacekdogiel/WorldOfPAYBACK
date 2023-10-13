@@ -6,6 +6,11 @@
 //
 import Foundation
 
+enum TransactionLoaderError: Error {
+    case randomError
+    case fileNotFound
+}
+
 struct MockTransactionLoader: TransactionLoading {
     var sleepTime: UInt64
     var showError: () -> Bool
@@ -19,17 +24,23 @@ struct MockTransactionLoader: TransactionLoading {
         try await Task.sleep(nanoseconds: sleepTime)
         
         if showError() {
-            throw NSError(domain: "App", code: 500, userInfo: [NSLocalizedDescriptionKey: "Random error occurred"])
+            throw TransactionLoaderError.randomError
         }
         
-        if let path = Bundle.main.path(forResource: "PBTransactions", ofType: "json") {
+        if let path = Bundle.main.path(forResource: Constants.filename, ofType: Constants.fileType) {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             let response = try decoder.decode(TransactionsResponse.self, from: data)
             return response.items
         } else {
-            throw NSError(domain: "App", code: 404, userInfo: [NSLocalizedDescriptionKey: "File not found"])
+            throw TransactionLoaderError.fileNotFound
         }
+    }
+    
+    struct Constants {
+        static let domain = "App"
+        static let filename = "PBTransactions"
+        static let fileType = "json"
     }
 }
